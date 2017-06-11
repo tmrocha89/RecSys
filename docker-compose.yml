@@ -1,0 +1,11 @@
+version: '2'
+services:
+    jupyter:
+        container_name: jupyter
+        image: jupyter/tensorflow-notebook
+        ports:
+            - "8888:8888"
+        volumes:
+          - ".:/home/jovyan"
+        command: "start-notebook.sh --NotebookApp.token=''"
+
